@@ -142,11 +142,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cell32Processer.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="MatrixApi.cpp" />
+    <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="test_1.cpp" />
+    <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cell32Processer.h" />
+    <ClInclude Include="CellType.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Cell32.h" />
+    <ClInclude Include="MatrixApi.h" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="World.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

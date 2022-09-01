@@ -6,16 +6,18 @@
 #include <algorithm>
 #include <chrono>
 #include "Game.h"
+#include <bitset>
 
+#include "Cell32Processer.h"
+#include "MatrixApi.h"
 
 
 
 int main(int, char**)
 {
-    Game game = Game(600,600);
-    game.do_something();
-    
+    Game game = Game(200,200);
     game.run();
+ 
 
     return 0;
 }
