@@ -1,6 +1,8 @@
 #pragma once
 #include <vector>
 #include "Cell32.h"
+#include <optional>
+
 using namespace std;
 class MatrixApi
 {
@@ -13,15 +15,20 @@ private:
 
 public:
 	MatrixApi(size_t width, size_t height);
+	vector<Cell32>* getMatrix() { return &cm; }
 
 	Cell32 get();
-	void set(Cell32 cell);
-	int next();
+	optional<Cell32> get(int dy, int dx);
+
 	size_t size() const { return size_; }
 	unsigned int getLocation() { return read_location; }
+
+	int next();
 	void reset();
-	vector<Cell32>* getMatrix() { return &cm; }
+
+	void set(Cell32 cell);
 	void set(int y, int x, CellType type);
+	void set(int dy, int dx, Cell32 cell);
 
 private:
 	void  initialize();

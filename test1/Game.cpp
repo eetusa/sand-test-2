@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <thread>
+#include "Utility.h"
 
 using namespace std;
 
@@ -10,10 +11,7 @@ Game::Game(unsigned int width, unsigned height) : width(width), height(height){
 	this->initialize();
 }
 
-void Game::toggleClock() {
-    uint8_t mask = 1;
-    this->clock ^= mask;
-}
+
 
 int Game::run() {
     // main loop
@@ -43,7 +41,7 @@ int Game::run() {
         world->process(clock);
         renderer->draw(world->getMatrixApi());
 
-        toggleClock();
+        clock = toggleClock(clock);
         std::this_thread::sleep_for(std::chrono::milliseconds(5));
     }
     end();

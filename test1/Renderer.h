@@ -5,7 +5,6 @@
 #include <vector>
 #include <algorithm>
 #include <chrono>
-#include "Matrix.h"
 #include "MatrixApi.h"
 
 class Renderer

@@ -11,13 +11,14 @@
 #include "Cell32Processer.h"
 #include "MatrixApi.h"
 
+#include <random>
+
 
 
 int main(int, char**)
 {
     Game game = Game(200,200);
     game.run();
- 
 
     return 0;
 }

@@ -27,7 +27,6 @@ private:
 	CellType addType = CellType::SAND;
 
 	uint8_t clock = 0;
-	void toggleClock();
 
 public:
 	Game(unsigned int width, unsigned int height);
