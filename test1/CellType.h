@@ -2,7 +2,7 @@
 #include <type_traits>
 #include <iostream>
 
-enum class CellType {
+enum class CellType : uint8_t {
 	AIR,
 	SAND,
 	WATER,

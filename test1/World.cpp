@@ -34,6 +34,7 @@ void World::addCell(tuple<int, int> coordinates, CellType type, uint8_t clock, i
 				if ((y_even % 2 == 0 && x_even % 2 == 0) || type == CellType::STONE) {
 					if (j < width && i < height) {
 						ma.set(i, j, type);
+						c32p.awaken_neighbours(i, j, ma);
 					}
 				}
 				x_even++;

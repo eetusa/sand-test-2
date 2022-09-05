@@ -20,14 +20,37 @@ Cell32 MatrixApi::get()
 Gets the cell **relatively** by dx and dy from where the iterator (read_location) is currently.
 Returns: Cell32
 */
-std::optional<Cell32> MatrixApi::get(int dy, int dx) {
+std::optional<Cell32> MatrixApi::getOptional(int dy, int dx) {
 	int target = read_location + (width * dy) + dx;
 	if (target >= 0 && target < size_) {
 		return cm[target];
 	}
 	return std::nullopt;
-
 }
+
+optional<Cell32> MatrixApi::getCellOptionalByCoordinates(int y, int x)
+{
+	int target = width * y + x;
+	if (target)
+		if (target >= 0 && target < size_) {
+			return cm[target];
+		}
+	return std::nullopt;
+}
+
+Cell32* MatrixApi::getCellReference(int dy, int dx)
+{
+	int target = read_location + (width * dy) + dx;
+	return &cm[target];
+}
+
+Cell32* MatrixApi::getCellReferenceByCoordinates(int y, int x)
+{
+	int target = width * y + x;
+	return &cm[target];
+}
+
+
 
 /*
 Set a cell in the current location of the iterator (read_location), overwriting existing cell.

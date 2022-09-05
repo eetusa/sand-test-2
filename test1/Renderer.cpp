@@ -86,7 +86,7 @@ int Renderer::initialize() {
     cout << "Initializing Renderer" << endl;
     SDL_Init(SDL_INIT_EVERYTHING);
 
-    this->window = SDL_CreateWindow("SDL", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 1000, 1000, SDL_WINDOW_RESIZABLE);
+    this->window = SDL_CreateWindow("SDL", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 600, 600, SDL_WINDOW_RESIZABLE);
     this->renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1");
