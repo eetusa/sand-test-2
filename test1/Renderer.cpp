@@ -56,7 +56,9 @@ void Renderer::matrixApiToPixels(MatrixApi* ma)
 
     ma->reset();
     do {
-        CellType type = ma->get().type;
+        Cell32* cell = ma->getCellReference();
+        CellType type = cell->type;
+
         int r = 0;
         int g = 0;
         int b = 0;
