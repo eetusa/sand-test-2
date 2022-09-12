@@ -30,7 +30,7 @@ void Cell32Processer::awaken_neighbours(int y, int x, MatrixApi& api)
 						api.getCellReferenceByCoordinates(dy, dx)->inactive = false;
 					}
 					else {
-						if (get_random(-1, 2) == -1) api.getCellReferenceByCoordinates(dy, dx)->inactive = false;
+						if (get_random(-1, 1) == -1) api.getCellReferenceByCoordinates(dy, dx)->inactive = false;
 					}
 				}
 		}
@@ -63,7 +63,7 @@ void Cell32Processer::process_sand(Cell32 cell, MatrixApi& api)
 						api.getCellReference(dy, dx)->inactive = false;
 					}
 					else {
-						if (get_random(-1, 2) == -1) api.getCellReference(dy, dx)->inactive = false;
+						if (get_random(-1, 1) == -1) api.getCellReference(dy, dx)->inactive = false;
 					}
 				}
 				continue;
